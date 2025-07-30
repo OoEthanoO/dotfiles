@@ -1,0 +1,104 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "spacing": 8,
+  "modules-left": ["custom/archlogo", "hyprland/workspaces", "hyprland/window", "custom/media"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+//    "idle_inhibitor",
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "backlight"
+ ],
+
+
+  "custom/archlogo": {
+    "format": "  Arch Linux",
+  },
+ 
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "format-icons": {
+      "active": "●",
+      "default": "○"
+    },
+    "on-click": "activate",
+    "all-outputs": false
+  },
+
+  "sway/window": {
+    "format": "{icon} {name}"
+},
+
+  "clock": {
+    "format": " {:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 5
+  },
+  "tray": {
+    "spacing": 8
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": " {volume}%",
+    "format-muted": " Muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " "]
+    },
+    "scroll-step": 5
+  },
+  "network": {
+    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip-format": "{ipaddr}/{ifname}"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 5
+  },
+  "memory": {
+    "format": " {percentage}%",
+    "interval": 5
+  },
+  "temperature": {
+    "thermal-zone": 0,
+    "format": " {temperatureC}°C"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{icon} {percent}%",
+    "format-icons": ["🔅", "🔆"]
+  }
+}

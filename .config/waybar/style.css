@@ -1,0 +1,112 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: "JetBrains Mono", "Font Awesome";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.0);
+    color: #c0caf5;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+}
+
+#custom-archlogo {
+    background-image: url("/usr/share/pixmaps/archlinux-logo.svg");
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 36px;
+    background-color: rgba(58, 58, 85, 0.6);
+    border-radius: 10px;
+    margin: 0 4px;
+}
+
+#window, #workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: #7aa2f7;
+    border-radius: 10px;
+}
+
+#workspaces button.active {
+    background: #7aa2f7;
+    color: #1a1b26;
+}
+
+#workspaces button.urgent {
+    color: #f7768e;
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #tray, #idle_inhibitor, #custom-archlogo {
+    padding: 0 12px;
+    margin: 0 1px;
+    background: rgba(58, 58, 85, 0.8);
+    border-radius: 10px;
+}
+
+#clock {
+    color: #9ece6a;
+    font-weight: bold;
+}
+
+#battery {
+    color: #9ece6a;
+}
+
+#battery.critical:not(.charging) {
+    color: #f7768e;
+}
+
+#network {
+    color: #bb9af7;
+}
+
+#network.disconnected {
+    color: #f7768e;
+}
+
+#pulseaudio {
+    color: #e0af68;
+}
+
+#pulseaudio.muted {
+    color: #f7768e;
+}
+
+#cpu {
+    color: #7dcfff;
+}
+
+#memory {
+    color: #2ac3de;
+}
+
+#temperature {
+    color: #a9b1d6;
+}
+
+#backlight {
+    color: #ff9e64;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #f7768e;
+}
+
+#idle_inhibitor {
+    color: #c0caf5;
+}
+
+#idle_inhibitor.activated {
+    background: #c0caf5;
+    color: #1a1b26;
+}
