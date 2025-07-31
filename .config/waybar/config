@@ -3,25 +3,29 @@
   "position": "top",
   "height": 36,
   "spacing": 8,
-  "modules-left": ["custom/archlogo", "hyprland/workspaces", "hyprland/window", "custom/media"],
+  "modules-left": ["custom/archlogo", "tray", "custom/nvidia", "hyprland/workspaces", "hyprland/window", "custom/media"],
   "modules-center": ["clock"],
   "modules-right": [
-    "tray",
+   
 //    "idle_inhibitor",
     "pulseaudio",
     "network",
     "cpu",
     "memory",
-    "temperature",
-    "battery",
-    "backlight"
+//    "temperature",
+    "battery"
+//    "backlight"
  ],
 
 
   "custom/archlogo": {
     "format": "  Arch Linux",
   },
- 
+  "custom/nvidia": {
+    "exec": "cat /sys/bus/pci/devices/0000:01:00.0/power/runtime_status",
+    "interval": 5,
+    "format": "{}",
+  },
   "hyprland/workspaces": {
     "format": "{name}",
     "format-icons": {
@@ -39,7 +43,12 @@
   "clock": {
     "format": " {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "interval": 5
+    "interval": 5,
+    "calendar": {
+	"format": {
+	    "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+	}
+    }
   },
   "tray": {
     "spacing": 8
@@ -93,7 +102,7 @@
     "format": "{icon}  {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
-    "format-alt": "{icon} {time}",
+    "format-alt": "{icon}  {time}",
     "format-icons": ["", "", "", "", ""]
   },
   "backlight": {
