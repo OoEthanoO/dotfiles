@@ -13,6 +13,7 @@ return {
                 "lua",
                 "cpp",
                 "python",
+                "rust",
             },
             auto_install = false,
         })

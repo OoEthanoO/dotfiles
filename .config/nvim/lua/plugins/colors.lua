@@ -3,12 +3,14 @@ local function enable_transparency()
 end
 return {
     {
-	"folke/tokyonight.nvim",
-	config = function()
-	    vim.cmd.colorscheme "tokyonight"
-	    enable_transparency()
-	end
-    },
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme "catppuccin"
+			enable_transparency()
+		end
+	},
     {
 	"nvim-lualine/lualine.nvim",
 	dependencies = {

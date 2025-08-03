@@ -36,8 +36,10 @@
     "all-outputs": false
   },
 
-  "sway/window": {
-    "format": "{icon} {name}"
+  "hyprland/window": {
+    "format": "{title}",
+    "icon": true,
+    "separate-outputs": true
 },
 
   "clock": {

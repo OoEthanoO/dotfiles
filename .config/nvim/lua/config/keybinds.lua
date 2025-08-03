@@ -34,3 +34,7 @@ vim.keymap.set("n", "<leader>rb", function()
         vim.notify("Not a C++ file", vim.log.levels.WARN)
     end
 end, { desc = "Build current C++ file" })
+
+vim.keymap.set("n", "<leader>q", function()
+    vim.diagnostic.setloclist({ open = true })
+end, { desc = "Show file diagnostics in location list" })
