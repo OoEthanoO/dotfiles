@@ -1,112 +1,165 @@
 * {
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     font-family: "JetBrains Mono Nerd Font";
-    font-size: 14px;
+    font-size: 12px;
     min-height: 0;
+    font-weight: 400;
 }
 
 window#waybar {
-    background: rgba(26, 27, 38, 0.0);
-    color: #c0caf5;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    border-radius: 10px;
+    background: transparent;
+    color: #cdd6f4;
 }
 
 #custom-archlogo {
-    background-image: url("/usr/share/pixmaps/archlinux-logo.svg");
-    background-size: 75%;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-width: 36px;
-    background-color: rgba(58, 58, 85, 0.6);
-    border-radius: 10px;
-    margin: 0 4px;
+    color: #89b4fa;
+    background: rgba(30, 30, 46, 0.8);
+    border-radius: 20px;
+    margin: 6px 4px;
+    padding: 4px 16px;
+    transition: all 0.2s ease;
 }
 
-#window, #workspaces button {
-    padding: 0 10px;
+#custom-archlogo:hover {
+    background: rgba(30, 30, 46, 0.9);
+}
+
+#workspaces {
+    background: rgba(30, 30, 46, 0.8);
+    border-radius: 20px;
+    margin: 6px 2px;
+    padding: 4px 8px;
+}
+
+#workspaces button {
+    padding: 0;
     background: transparent;
-    color: #7aa2f7;
-    border-radius: 10px;
+    color: #89b4fa;
+    border-radius: 50%;
+    margin: 0 2px;
+    transition: all 0.2s ease;
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 10px;
+}
+
+#workspaces button:hover {
+    background: rgba(137, 180, 250, 0.2);
 }
 
 #workspaces button.active {
-    background: #7aa2f7;
-    color: #1a1b26;
+    background: #89b4fa;
+    color: #1e1e2e;
 }
 
 #workspaces button.urgent {
-    color: #f7768e;
+    background: #f38ba8;
+    color: #1e1e2e;
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #tray, #idle_inhibitor, #custom-archlogo {
-    padding: 0 12px;
-    margin: 0 1px;
-    background: rgba(58, 58, 85, 0.8);
-    border-radius: 10px;
+#window {
+    background: rgba(30, 30, 46, 0.8);
+    color: #cdd6f4;
+    border-radius: 20px;
+    margin: 6px 2px;
+    padding: 4px 16px;
+    transition: all 0.2s ease;
+}
+
+#tray {
+    background: rgba(30, 30, 46, 0.8);
+    border-radius: 20px;
+    margin: 6px 2px;
+    padding: 4px 12px;
+}
+
+#custom-nvidia {
+    background: rgba(30, 30, 46, 0.8);
+    color: #94e2d5;
+    border-radius: 20px;
+    margin: 6px 4px;
+    padding: 4px 16px;
+    transition: all 0.2s ease;
 }
 
 #clock {
-    color: #9ece6a;
-    font-weight: bold;
+    background: rgba(30, 30, 46, 0.8);
+    color: #a6e3a1;
+    border-radius: 20px;
+    margin: 6px 4px;
+    padding: 4px 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+#battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio {
+    background: rgba(30, 30, 46, 0.8);
+    border-radius: 20px;
+    margin: 6px 2px;
+    padding: 4px 14px;
+    transition: all 0.2s ease;
 }
 
 #battery {
-    color: #9ece6a;
+    color: #a6e3a1;
+    margin: 6px 4px;
 }
 
 #battery.critical:not(.charging) {
-    color: #f7768e;
+    color: #f38ba8;
+}
+
+#battery.charging {
+    color: #f9e2af;
 }
 
 #network {
-    color: #bb9af7;
+    color: #cba6f7;
 }
 
 #network.disconnected {
-    color: #f7768e;
+    color: #f38ba8;
 }
 
 #pulseaudio {
-    color: #e0af68;
+    color: #f9e2af;
 }
 
 #pulseaudio.muted {
-    color: #f7768e;
+    color: #f38ba8;
 }
 
 #cpu {
-    color: #7dcfff;
+    color: #74c7ec;
 }
 
 #memory {
-    color: #2ac3de;
+    color: #89dceb;
 }
 
 #temperature {
-    color: #a9b1d6;
+    color: #b4befe;
+}
+
+#temperature.critical {
+    color: #f38ba8;
 }
 
 #backlight {
-    color: #ff9e64;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #f7768e;
+    color: #fab387;
 }
 
 #idle_inhibitor {
-    color: #c0caf5;
+    background: rgba(30, 30, 46, 0.8);
+    color: #cdd6f4;
+    border-radius: 20px;
+    margin: 6px 4px;
+    padding: 4px 16px;
+    transition: all 0.2s ease;
 }
 
 #idle_inhibitor.activated {
-    background: #c0caf5;
-    color: #1a1b26;
+    background: #cdd6f4;
+    color: #1e1e2e;
 }
